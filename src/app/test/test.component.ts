@@ -9,6 +9,7 @@ import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 export class TestComponent implements OnInit {
 
   name:string="Thilini ";
+  public isDissable=true;    //property binding
 
   showName(){
     return "hello "+this.name;
