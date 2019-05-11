@@ -10,9 +10,19 @@ export class TestComponent implements OnInit {
 
   name:string="Thilini ";
   public isDissable=true;    //property binding
+  eventName;
+  message;
 
   showName(){
     return "hello "+this.name;
+  }
+
+  showMwsssage(event){
+    this.eventName=event.type;
+    this.message='button is working';
+    
+    
+
   }
 
 
