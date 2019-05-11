@@ -1,5 +1,5 @@
 <h2>Welcome
- <input type="text" value="{{ name }}">
+ <input type="text" value="{{ name }}">  <!--String interpolation-->
  <br>
  {{showName()}}
 </h2>
@@ -8,9 +8,15 @@
     <input [disabled]="isDissable" type="text"  value="{{name}}">   <!--property binding-->
 </div>
 
-<div style="text-decoration-color: brown">
-<button (click)="showMwsssage($event)">Click</button><br>
+<div>
+<button style="background-color: darkcyan" (click)="showMwsssage($event)">Click</button><br>   <!--event binding-->
 {{ eventName }}<br>
 {{ message }}
+</div>
+<br><br>
+
+<div>
+<input style="background-color: darkkhaki" [(ngModel)]="name" type="text">
+
 </div>
 
