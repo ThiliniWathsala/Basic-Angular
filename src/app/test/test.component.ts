@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
-
+import { User} from '../test/test.module';
+import { userInfo } from 'os';
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -12,6 +13,20 @@ export class TestComponent implements OnInit {
   public isDissable=true;    //property binding
   eventName;
   message;
+
+
+  //create user type object
+
+  user:User={
+    fname:'Thilini',
+    lname:'Wathsala'
+
+  }
+
+  showDetails(event){
+    this.isDissable=false;
+  }
+
 
   showName(){
     return "hello "+this.name;

@@ -19,4 +19,22 @@
 <input style="background-color: darkkhaki" [(ngModel)]="name" type="text">
 
 </div>
+<br><br>
+<div >
+    <button (click)="showDetails($event)">Show</button>
+    <div >
+        <label for="fname">First Name</label>
+            <input [disabled]="isDissable"
+                     style="background-color: lightblue"
+                     type="text"
+                    [(ngModel)]="user.fname">
+     </div>
+     <div>
+        <label for="lname">Last Name</label>
+            <input  style="background-color: lightblue"
+                 [disabled]="isDissable"
+                     type="text"
+                    [(ngModel)]="user.lname">
+     </div>
 
+</div>
