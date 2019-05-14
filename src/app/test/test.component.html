@@ -21,7 +21,7 @@
 </div>
 <br><br>
 <div >
-    <button (click)="showDetails($event)">Show</button>
+    <button *ngIf="isDissable" (click)="showDetails($event)">Show</button><br><br>
     <div >
         <label for="fname">First Name</label>
             <input [disabled]="isDissable"
@@ -36,5 +36,12 @@
                      type="text"
                     [(ngModel)]="user.lname">
      </div>
+
+     <br><br>
+        <button *ngIf="!isDissable ; else elseblock1" (click)="hideDetails($event)">Save</button>     
+        <br><br>
+        <ng-template #elseblock1>
+            <h2>else block is working</h2>
+        </ng-template>
 
 </div>

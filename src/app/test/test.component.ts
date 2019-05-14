@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 import { User} from '../test/test.module';
-import { userInfo } from 'os';
+
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
@@ -25,6 +25,9 @@ export class TestComponent implements OnInit {
 
   showDetails(event){
     this.isDissable=false;
+  }
+  hideDetails(event){
+    this.isDissable=true;
   }
 
 
