@@ -44,4 +44,36 @@
             <h2>else block is working</h2>
         </ng-template>
 
+
+        <!--check ngSwith case-->
+    <div [ngSwitch]="color">
+        <div *ngSwitchCase="'green'" ><p >you pick the green</p></div>
+        <div *ngSwitchCase="'red'"><p>you pick the red</p></div>
+    </div>
+<div>
+        <label for="Contact">Contatc No</label><br>
+    <button [disabled]="!isContatcDissable" (click)="addContact($event)" >Add</button>
+  
+    <ul >
+      <li *ngFor="let contacts of user.contact"> 
+    
+      <input 
+      [disabled]="isContatcDissable"
+     
+      type="text"  value="{{contacts}}">
+    </li>
+    </ul>
+    <button [disabled]="isContatcDissable"  (click)="showEnable($event)">Save</button>
+</div>
+
+<!--
+<div>
+ <ul>
+    <li *ngFor="let colr of col">
+    {{colr}}
+</li>
+</ul>
+
+</div>-->
+
 </div>
