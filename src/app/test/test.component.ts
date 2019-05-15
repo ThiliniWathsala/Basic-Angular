@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
 import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
 import { User} from '../test/test.module';
+
 
 
 @Component({
@@ -9,6 +10,8 @@ import { User} from '../test/test.module';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
+   
+  @Input('myName') public midname ;
 
   name:string="Thilini ";
   public isDissable=true;    //property binding
@@ -26,6 +29,7 @@ export class TestComponent implements OnInit {
     contact:["0711236547","0714569854"]
 
   }
+
 
   addContact(event){
    this. isContatcDissable=false;
